@@ -12,28 +12,34 @@ body {
     font-size: 42px;
     text-align: left;
     text-transform: uppercase;
-    line-height: 78px;
-    height: 78px;
+    line-height: 80px;
+    letter-spacing: 3px;
+    height: 80px;
     display:inline-block;
-    margin: auto;
+    margin: 0 auto;
 }
 
 h2 {
+    margin: 0;
     color: #3f6fb6;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 2px;
 }
 
 h3 {
+    margin: 0;
     text-transform: uppercase;
     font-weight: normal;
     color: black;
     text-align: left;
     font-size: 28px;
+    letter-spacing: -1px;
 }
 
 p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 20px;
 }
 
@@ -41,14 +47,18 @@ table {
     border-collapse: collapse;
     font-size: 20px;
     margin-top: 35px;
+    margin-bottom: 15px;
 }
 
 td {
-    padding-bottom: 35px;
+    padding-bottom: 33px;
+}
+tr:last-child td {
+    padding-bottom: 0;
 }
 
 td:first-child {
-    padding-right: 40px;
+    padding-right: 55px;
 }
 
 td:first-child {
@@ -73,45 +83,61 @@ div[class^="column-"] {
 
 
 .container {
-    padding-bottom: 40px;
+    padding-bottom: 35px;
+}
+
+.basic-info {
+    padding-bottom: 65px;
 }
 
 .container:not(.basic-info) h1:before {
     content: "";
     display: inline-block;
-    margin: 0 auto;
-    margin-right: 20px;
-    width: 75px;
-    height: 70px;
+    margin: 0 10px 0 auto;
+    width: 80px;
+    height: 80px;
     vertical-align: middle;
-    background: #3d6cb0;
-    border: 3px solid white;
-    box-shadow: 0 0 0 1px #3d6cb0;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
-/*
-.container:not(.basic-info) h1:after {
-    display: inline-block;
-    content: "";
-    top: 50%;
-    width: 200px;
-    right: 100%;
-    height: 10px;
-    background: #3d6cb0;
-    vertical-align: middle;
-}*/
 
-.column-2 h1:before {
+.column-2 .container:not(.basic-info) h1:before {
     margin-right: 20px;
+}
+
+.profile h1:before {
+    background: url("img/PROFILE ICON.png");
+}
+
+.contact h1:before {
+    background: url("img/PHONE ICON.png");
+}
+
+.skills h1:before {
+    background: url("img/SKILLS ICON.png");
+}
+
+.education h1:before {
+    background: url("img/EDUCATION ICON.png");
+}
+
+.experience h1:before {
+    background: url("img/EXPERIENCE ICON.png");
+}
+
+.software h1:before {
+    background: url("img/SOFTWARE ICON.png");
 }
 
 .basic-info .photo {
-    margin: 17px auto 58px auto;
+    margin: 17px auto 20px auto;
     height: 225px;
     width: 225px;
-    background: #3d6cb0;
+    background: #3f6fb6;
     border: 15px solid white;
-    box-shadow: 0 0 0 1px #3d6cb0;
+    box-shadow: 0 0 0 1px #3f6fb6;
     border-radius: 50%;
 }
 
@@ -122,36 +148,58 @@ div[class^="column-"] {
     text-align: center;
 }
     .basic-info .name h1 {
+        margin: 0;
         font-weight: normal;
         font-size: 60px;
         color: black;
         text-transform: uppercase;
         text-align: center;
-        line-height: 10%;
     }
 
     .basic-info .name h2 {
+        margin: 0;
         color: black;
         font-weight: bold;
         font-size: 65px;
-        line-height: 0;
+        line-height: 65%;
     }
 
     .basic-info .name h3 {
+        margin: 0;
         font-weight: bold;
         font-size: 28px;
         text-align: center;
-        line-height: 40%;
+        line-height: 2.5;
     }
 
+.skills h3 {
+    text-align: center;
+}
+
 .rating {
+    margin: 8px auto 20px;
     display: flex;
     justify-content: center;
 }
 
+li:last-child .rating {
+    margin-top: 5px;
+}
+
+.skills ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 23px;
+}
+
+.skills li {
+    margin-top: 10px;
+}
+
+
 .circle {
     display: inline-block;
-    background: #3d6cb0;
+    background: #3f6fb6;
     width: 20px;
     height: 20px;
     margin-right: 10px;
@@ -165,33 +213,45 @@ div[class^="column-"] {
 .education ul,
 .experience ul {
     list-style: none;
-    margin-top: 35px;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .education li,
 .experience li {
     display: block;
-    margin-left: 20px;
+    margin-left: 56px;
+}
+
+.education p,
+.experience p {
+    margin-top: 5px;
+    line-height: 21px;
+    margin-bottom: 12px;
 }
 
 .education li h2,
 .experience li h2 {
-    margin-left: -47px;
+    margin-left: -43px;
 }
 
 .education li h2::before,
 .experience li h2::before {
     content: "";
     display: inline-block;
-    margin-right: 27px;
-    top: 0;
-    left: -67px;
+    vertical-align: middle;
+    margin-right: 22px;
     width: 22px;
     height: 22px;
     border-radius: 50%;
     background-color: black;
 }
 
+.education li h3,
+.experience li h3 {
+    margin-top: 2px;
+}
 
 .education span,
 .experience span {
@@ -199,27 +259,32 @@ div[class^="column-"] {
     text-transform: none;
     font-weight: normal;
     font-style: normal;
-
 }
 
-.skills h3 {
-    text-align: center;
+.experience ul {
+    margin-top: 45px;
+}
+
+.experience h2 {
+    color: black;
 }
 
 .software .list {
     list-style: none;
     column-count: 2;
+    margin-top: 25px;
+    margin-left: 5px;
 }
 
-.list h3 {
-    margin-top: 0;
+.software-list-item {
+    margin-bottom: 22px;
 }
 
 .bar {
     width: 305px;
     height: 25px;
     background: #e6e6e6;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .bar:after {
@@ -229,7 +294,7 @@ div[class^="column-"] {
     left: 0;
     height: 100%;
     width: 100%;
-    background: #3d6cb0;
+    background: #3f6fb6;
 }
 
 .photoshop:after {
